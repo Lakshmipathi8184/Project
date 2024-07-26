@@ -4,11 +4,11 @@ FROM openjdk:8-jdk
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy your application JAR file into the container (if needed)
+# Copy your application JAR file into the container
  COPY your-application.jar /app/
-
-# Set environment variables (optional)
-# ENV JAVA_OPTS="-Xmx512m"
+ 
+ # Make port 8080 available to the world outside this container
+EXPOSE 8080
 
 # Run the application (if applicable)
 CMD ["java", "-jar", "your-application.jar"]
